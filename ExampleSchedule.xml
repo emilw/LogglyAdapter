@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Schedule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ScheduledTasksGroups>
+    <ScheduledTasksGroup>
+      <Name>Master data</Name>
+      <Enabled>true</Enabled>
+      <LatestExecution>2014-09-12 21:00:00</LatestExecution>
+      <ScheduleConfig>
+        <StartDate>2001-02-12 02:00:00</StartDate>
+        <StopDate />
+        <StartTime>00:00:00</StartTime>
+        <StopTime>23:59:59</StopTime>
+        <Monday>true</Monday>
+        <Tuesday>true</Tuesday>
+        <Wednesday>true</Wednesday>
+        <Thursday>true</Thursday>
+        <Friday>true</Friday>
+        <Saturday>true</Saturday>
+        <Sunday>true</Sunday>
+        <IntervalType>Min</IntervalType>
+        <TimeInterval>1</TimeInterval>
+      </ScheduleConfig>
+      <ScheduledTasks>
+        <ScheduledTask>
+          <Name>Import supplier</Name>
+          <Priority>1</Priority>
+          <Type>File</Type>
+          <ProcessType>Transformation</ProcessType>
+          <Process>E:\MIG\Processes\XIAndFiles\MasterData\MasterDataFromFile.xml</Process>
+          <CultureInfo>sv-SE</CultureInfo>
+          <Enabled>true</Enabled>
+          <Timeout>1000000</Timeout>
+          <LogTransformation>
+            <ConfigParameters />
+            <TransformationName />
+            <Version>
+              <Number>1.0.0.0</Number>
+              <Standard>false</Standard>
+            </Version>
+            <Comment>
+				Current Version: 1.0
+				ChangeTime: 2014-05-30
+			</Comment>
+            <Sources />
+            <Destinations>
+              <Destination>
+                <DestinationId>ScheduleLog</DestinationId>
+                <Remote />
+                <ConnectionType>Custom</ConnectionType>
+                <ConnectionSubType>0</ConnectionSubType>
+                <AdapterNameSpace>LogglyAdapter.LogglyAdapter</AdapterNameSpace>
+                <AssemblyPath>E:\Git\LogglyAdapter\LogglyAdapter\bin\Debug\LogglyAdapter.dll</AssemblyPath>
+                <ConnectionString>http://logs-01.loggly.com/inputs/yourLogglyGUID/tag/http/</ConnectionString>
+                <DestinationPath />
+                <Parameters>
+                  <Parameter>
+                    <Name>LogOriginIdentifier</Name>
+                    <Value>MyDemoPC</Value>
+                    <UseLookUp>false</UseLookUp>
+                  </Parameter>
+                </Parameters>
+              </Destination>
+            </Destinations>
+            <Mappings>
+              <Mapping>
+                <SourceId>NoSource</SourceId>
+                <DestinationId>ScheduleLog</DestinationId>
+                <MappingValues>
+                  <MappingValue>
+                    <Source>Severity</Source>
+                    <Destination>Severity</Destination>
+                  </MappingValue>
+                  <MappingValue>
+                    <Source>InfoText</Source>
+                    <Destination>InfoText</Destination>
+                  </MappingValue>
+                  <MappingValue>
+                    <Source>TaskName</Source>
+                    <Destination>TaskName</Destination>
+                  </MappingValue>
+                  <MappingValue>
+                    <Source>ErrorText</Source>
+                    <Destination>ErrorText</Destination>
+                  </MappingValue>
+                </MappingValues>
+              </Mapping>
+            </Mappings>
+          </LogTransformation>
+        </ScheduledTask>
+      </ScheduledTasks>
+    </ScheduledTasksGroup>
+  </ScheduledTasksGroups>
+</Schedule>
