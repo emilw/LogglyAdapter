@@ -1,0 +1,8 @@
+E:\Git\LogglyAdapter\LogglyAdapter\bin\Debug\LogglyAdapter.dll
+E:\Git\LogglyAdapter\LogglyAdapter\bin\Debug\LogglyAdapter.pdb
+E:\Git\LogglyAdapter\LogglyAdapter\bin\Debug\MediusTransformer.dll
+E:\Git\LogglyAdapter\LogglyAdapter\bin\Debug\Microsoft.ServiceBus.dll
+E:\Git\LogglyAdapter\LogglyAdapter\bin\Debug\XmlSampleGenerator.dll
+E:\Git\LogglyAdapter\LogglyAdapter\obj\Debug\LogglyAdapter.csprojResolveAssemblyReference.cache
+E:\Git\LogglyAdapter\LogglyAdapter\obj\Debug\LogglyAdapter.dll
+E:\Git\LogglyAdapter\LogglyAdapter\obj\Debug\LogglyAdapter.pdb
